@@ -11,16 +11,22 @@ use timelayer_verifier::roster::parse_roster;
 
 fn usage() {
     eprintln!(
-        "TimeLayer verifier
+        "TimeLayer verifier {}
 usage:
   timelayer-verifier verify <receipt.tlsig> <roster.txt> <k> [by_node|by_operator]
-  timelayer-verifier testvec gen <dir>     # write roster.txt + valid.tlsig + forged.tlsig"
+  timelayer-verifier testvec gen <dir>     # write roster.txt + valid.tlsig + forged.tlsig
+  timelayer-verifier --version             # print version",
+        env!("CARGO_PKG_VERSION")
     );
 }
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     let code = match args.get(1).map(String::as_str) {
+        Some("--version") | Some("-V") | Some("version") => {
+            println!("timelayer-verifier {}", env!("CARGO_PKG_VERSION"));
+            0
+        }
         Some("verify") if args.len() >= 5 => verify(
             Path::new(&args[2]),
             Path::new(&args[3]),
