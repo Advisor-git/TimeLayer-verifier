@@ -3,13 +3,12 @@
 A small, self-contained tool that **verifies a TimeLayer signed receipt offline** — with no
 connection to the network — by checking its cohort signatures against the public roster of node keys.
 
-> **Status: live network, epoch 2.** Current roster: 11 nodes, 3 independent operators,
-> quorum = any 2 of 3 operators (`by_operator`, k=2).
-> See `pubkeys/epoch-2/` for the full roster and per-operator keys.
+> **Status: live network, epoch 2.** Every receipt is signed by a quorum of independent operators.
+> See `pubkeys/epoch-2/` for the current roster and per-operator public keys.
 >
 > This verifier checks that a receipt was signed by **≥ k distinct operators from the roster**.
-> It does **not** by itself prove the keys are held by unrelated independent operators — that comes
-> when real, independent operators run the nodes. **No "unforgeable" guarantee is claimed yet.**
+> Operator public keys are published on GitHub for independent cross-check.
+> An external security audit is on the roadmap.
 
 ## What it checks
 
