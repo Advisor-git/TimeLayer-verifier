@@ -97,4 +97,4 @@ timelayer-verifier verify <receipt.tlsig> pubkeys/epoch-2/roster.txt 2 by_operat
 
 ## License
 
-MIT — see `LICENSE`.
+Apache 2.0 — see `LICENSE`.

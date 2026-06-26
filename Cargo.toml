@@ -3,7 +3,7 @@ name = "timelayer-verifier"
 version = "1.0.0"
 edition = "2021"
 description = "Offline verifier for TimeLayer signed receipts (.tlsig) — checks cohort Ed25519 signatures against the public roster"
-license = "MIT"
+license = "Apache-2.0"
 
 [dependencies]
 blake3 = "1.5"
