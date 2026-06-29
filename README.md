@@ -1,5 +1,7 @@
 # TimeLayer — offline verifier
 
+**English** · [Русский](README.ru.md)
+
 A small, self-contained tool that **verifies a TimeLayer receipt offline** — with no network,
 no roster lookup, and no trust in us. A receipt is a **pair of files** that carries everything
 needed to check it; the verifier recomputes every hash and checks the signatures locally.
