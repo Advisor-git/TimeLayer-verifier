@@ -19,3 +19,5 @@ public = ["tl_verify_public/public"]
 [dependencies]
 tl_receipts.workspace = true
 tl_verify_public.workspace = true
+tl_finality.workspace = true
+tl_digest.workspace = true
